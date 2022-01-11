@@ -57,15 +57,13 @@ public class ReflectionUtils {
 		return fields;
 	}
 
-	public static Object invokeMethod(Object objeto, String nomeClasse, String nomeMetodo)
-			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, ClassNotFoundException, NoSuchMethodException, SecurityException {
-		Class<?> classe = Class.forName(nomeClasse);
+	public static Object invokeMethod(Object objeto, String nomeMetodo)
+			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException, 
+			ClassNotFoundException, NoSuchMethodException, SecurityException {
+		Class<?> classe = objeto.getClass();
+		
 		Method metodo = classe.getMethod(nomeMetodo);
 		Object resultado = metodo.invoke(objeto);
-
-		metodo = classe.getMethod(nomeMetodo);
-
-		resultado = metodo.invoke(objeto);
 
 		System.out.println(resultado);
 		

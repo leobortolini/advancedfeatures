@@ -9,7 +9,7 @@ import reflection.utils.ReflectionUtils;
 public class ReflectionMain {
 
 	public static void main(String[] args) {
-		Triangulo t1 = new Triangulo("Primeiro retangulo", Color.BLACK, 3.0, 4.0, 5.0);
+		
 		
 		try {
 			String classe = "reflection.model.Triangulo";
@@ -26,8 +26,11 @@ public class ReflectionMain {
 			System.out.println("\ngetClassDeclaredFields");
 			ReflectionUtils.getClassDeclaredFields(classe);
 			
+			Triangulo t1 = new Triangulo("Primeiro triangulo", Color.BLACK, 3.0, 4.0, 5.0);
 			System.out.println("\ncallingMethod");
-			ReflectionUtils.invokeMethod(t1, classe, "getLado3");
+			ReflectionUtils.invokeMethod(t1, "getLado3");
+			
+			
 			
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block

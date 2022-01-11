@@ -31,5 +31,7 @@ public class Forma {
 		this.cor = cor;
 	}
 	
-	
+	public void metodoPublicoGenerico() {
+		
+	}
 }
