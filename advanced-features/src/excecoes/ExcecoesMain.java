@@ -10,6 +10,7 @@ public class ExcecoesMain {
 
 	public static void main(String[] args) {
 		String[] textos = { "a", "b" };
+		
 		try {
 			System.out.println(textos[2]);
 		} catch (ArrayIndexOutOfBoundsException e) {
